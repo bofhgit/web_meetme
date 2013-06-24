@@ -137,7 +137,7 @@ function contact(){
 	</tr>
 	</table>
 <br><br>
-	<?
+	<?php
 }
 
 ?>
