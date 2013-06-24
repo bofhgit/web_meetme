@@ -758,7 +758,7 @@
     * @param string $c;
     * @return array, see evaluate for return information.
     */
-    function exec_goto($a, $b=NULL, $c=NULL)
+    function exec_gotoit($a, $b=NULL, $c=NULL)
     {
       return $this->exec('Goto', trim("$a|$b|$c", '|'));
     }
@@ -774,7 +774,7 @@
     * @param string $extension
     * @param string $priority
     */
-    function goto($context, $extension='s', $priority=1)
+    function gotoit($context, $extension='s', $priority=1)
     {
       $this->set_context($context);
       $this->set_extension($extension);
