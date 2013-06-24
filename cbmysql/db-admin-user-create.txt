@@ -1,0 +1,10 @@
+-- Database: `meetme`
+-- 
+
+-- 
+-- Create the initial admin user for sqldb authentication
+-- 
+
+INSERT INTO meetme.user 
+	(first_name, last_name, email, telephone, password, admin) 
+	VALUES ('Web', 'MeetMe', 'wmm@localhost', '1234', 'wmmpw', 'Admin');

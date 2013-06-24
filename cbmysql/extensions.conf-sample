@@ -1,0 +1,18 @@
+[wmm]
+;This context should either be included
+;from the contexts your phones or use
+;a Goto() to reach this context
+
+;You can of course change the extension to
+;match your number plan
+exten => 7650,1,MeetMe
+
+;Upon exiting the conference, whether by hanging
+;up, being kicked, or the conference ending, the
+;standard Asterisk CDR process will be invoked
+;after the 'h' extension completes (see README)
+exten => h,1,ExecIf(0${MEETMEBOOKID}?NoOp():NoCDR)
+exten => h,n,Set(CDR(bookId)=${MEETMEBOOKID})
+exten => h,n,Set(CDR(CIDnum)=${CALLERID(num)})
+exten => h,n,Set(CDR(CIDname)=${CALLERID(name)})
+
