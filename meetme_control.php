@@ -132,11 +132,9 @@ getpost_ifset('confno'); ?>
 	<FORM METHOD=POST ACTION="conf_add.php?s=1&t=0&order=<?php echo "$order&sens=$sens&current_page=$current_page&PHPSESSID=$PHPSESSID&Extend&confno=$confno"; ?>" target="superframe">
 	<input type="Submit" name="Extend" align="top" border="0" value="<?php print _("Extend")?>" /> <td><td>
 	</FORM>
-	<FORM METHOD=POST ACTION="meetme_control.php?s=2&t=3" onclick="conf_action('end','<?PHP echo $confno; ?>', '')" >
-	<input type="Submit" name="EndConf" align="top" border="0" value="<?php print _("End Now") ?>" /> 
+	<button type="button" name="EndNow" onClick="javascript:conf_action('end','<?PHP echo $confno; ?>','')" align="top" border="0">End now</button>
 	<td>
-	</FORM>
-               <input type="Submit" name="Invite" onClick="out_call(<?php echo $confno; ?>)" align="top" border="0" value="<?php print _("Invite") ?>" />
+	<button type="button" name="Invite" onClick="out_call(<?php echo $confno; ?>)" align="top" border="0"><?php print _("Invite") ?></button>
                </table>
 
 <script language="javascript">
